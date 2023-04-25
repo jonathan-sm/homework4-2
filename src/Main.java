@@ -52,8 +52,8 @@ public class Main {
         int fertility = 17;
         int mortality = 8;
         int term = 10;
-        int year = 1;
-        while (year <= term) {
+        int year = 0;
+        while (year < term) {
             population = population + population * (fertility - mortality) / 1000;
             year++;
             System.out.println(" Год " + year + ", численность населения составляет " + population);
@@ -95,7 +95,7 @@ public class Main {
         double sum = 15000;
         int yearCount = 9;
         int month = 1;
-        while (month < yearCount * 12) {
+        while (month <= yearCount * 12) {
             sum += sum * procent / 100;
             if (month % 6 == 0) {
                 System.out.println(String.format(" Месяц %s, сумма накоплений составляет %s", month, sum));
@@ -110,7 +110,7 @@ public class Main {
         int friday = 1;
         int dayMonth = 31;
         int dayWeek = 7;
-        for (int i = friday; i < dayMonth; i += dayWeek) {
+        for (int i = friday; i <= dayMonth; i += dayWeek) {
             System.out.println(String.format("Сегодня пятница, %s -е число. Необходимо подготовить отчет", i));
         }
     }
